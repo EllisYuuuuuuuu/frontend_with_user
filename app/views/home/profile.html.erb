@@ -1,0 +1,7 @@
+<h1><%= current_user.email %>'s profile page:</h1>
+<br/>
+<br/>
+<br/>
+<% if  current_user.website.nil? %>
+  <h2>Hey my friend, you should enter your information and let PC build give you the recommanded configuration</h2>
+  <% else %> <h2>Your website address: <%= current_user.website%></h2> <% end %>

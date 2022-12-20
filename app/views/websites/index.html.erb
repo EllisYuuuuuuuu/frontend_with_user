@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Websites</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Username</th>
+      <th>Website address</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% User.all.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td>
+          <% if !user.website.nil? %>
+            <%= user.website %>
+            <% else %>
+              This user hasn't built any website with webzero
+            <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%# <%= link_to 'New Website', new_website_path %1> %>

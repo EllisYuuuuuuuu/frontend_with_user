@@ -1,0 +1,144 @@
+{
+  "apigClient.js": "/packs/js/apigClient-4753fe96b4ffbf8047af.js",
+  "apigClient.js.map": "/packs/js/apigClient-4753fe96b4ffbf8047af.js.map",
+  "application.js": "/packs/js/application-7327eabc9ef421ba9425.js",
+  "application.js.map": "/packs/js/application-7327eabc9ef421ba9425.js.map",
+  "entrypoints": {
+    "apigClient": {
+      "js": [
+        "/packs/js/apigClient-4753fe96b4ffbf8047af.js"
+      ],
+      "js.map": [
+        "/packs/js/apigClient-4753fe96b4ffbf8047af.js.map"
+      ]
+    },
+    "application": {
+      "js": [
+        "/packs/js/application-7327eabc9ef421ba9425.js"
+      ],
+      "js.map": [
+        "/packs/js/application-7327eabc9ef421ba9425.js.map"
+      ]
+    },
+    "in": {
+      "js": [
+        "/packs/js/in-9c420907a00b157c1b9d.js"
+      ],
+      "js.map": [
+        "/packs/js/in-9c420907a00b157c1b9d.js.map"
+      ]
+    },
+    "lib/apiGatewayCore/apiGatewayClient": {
+      "js": [
+        "/packs/js/lib/apiGatewayCore/apiGatewayClient-025510310bee2d2060b2.js"
+      ],
+      "js.map": [
+        "/packs/js/lib/apiGatewayCore/apiGatewayClient-025510310bee2d2060b2.js.map"
+      ]
+    },
+    "lib/apiGatewayCore/sigV4Client": {
+      "js": [
+        "/packs/js/lib/apiGatewayCore/sigV4Client-1af616ac71e037915a3a.js"
+      ],
+      "js.map": [
+        "/packs/js/lib/apiGatewayCore/sigV4Client-1af616ac71e037915a3a.js.map"
+      ]
+    },
+    "lib/apiGatewayCore/simpleHttpClient": {
+      "js": [
+        "/packs/js/lib/apiGatewayCore/simpleHttpClient-218bafefc196c62b3ff7.js"
+      ],
+      "js.map": [
+        "/packs/js/lib/apiGatewayCore/simpleHttpClient-218bafefc196c62b3ff7.js.map"
+      ]
+    },
+    "lib/apiGatewayCore/utils": {
+      "js": [
+        "/packs/js/lib/apiGatewayCore/utils-ba8930224fc1ef788217.js"
+      ],
+      "js.map": [
+        "/packs/js/lib/apiGatewayCore/utils-ba8930224fc1ef788217.js.map"
+      ]
+    },
+    "lib/axios/dist/axios": {
+      "js": [
+        "/packs/js/lib/axios/dist/axios-fa837d685c9ef9190e63.js"
+      ],
+      "js.map": [
+        "/packs/js/lib/axios/dist/axios-fa837d685c9ef9190e63.js.map"
+      ]
+    },
+    "lib/CryptoJS/components/enc-base64": {
+      "js": [
+        "/packs/js/lib/CryptoJS/components/enc-base64-c69087e9eeb0272bc24a.js"
+      ],
+      "js.map": [
+        "/packs/js/lib/CryptoJS/components/enc-base64-c69087e9eeb0272bc24a.js.map"
+      ]
+    },
+    "lib/CryptoJS/components/hmac": {
+      "js": [
+        "/packs/js/lib/CryptoJS/components/hmac-9623fa322719bb24b2c7.js"
+      ],
+      "js.map": [
+        "/packs/js/lib/CryptoJS/components/hmac-9623fa322719bb24b2c7.js.map"
+      ]
+    },
+    "lib/CryptoJS/rollups/hmac-sha256": {
+      "js": [
+        "/packs/js/lib/CryptoJS/rollups/hmac-sha256-eb56cf5456a00b284c14.js"
+      ],
+      "js.map": [
+        "/packs/js/lib/CryptoJS/rollups/hmac-sha256-eb56cf5456a00b284c14.js.map"
+      ]
+    },
+    "lib/CryptoJS/rollups/sha256": {
+      "js": [
+        "/packs/js/lib/CryptoJS/rollups/sha256-32e963bc3bc5faa91e05.js"
+      ],
+      "js.map": [
+        "/packs/js/lib/CryptoJS/rollups/sha256-32e963bc3bc5faa91e05.js.map"
+      ]
+    },
+    "lib/url-template/url-template": {
+      "js": [
+        "/packs/js/lib/url-template/url-template-6dec30e6f7819ee3538e.js"
+      ],
+      "js.map": [
+        "/packs/js/lib/url-template/url-template-6dec30e6f7819ee3538e.js.map"
+      ]
+    },
+    "search": {
+      "js": [
+        "/packs/js/search-0ba05f8eb484a5546000.js"
+      ],
+      "js.map": [
+        "/packs/js/search-0ba05f8eb484a5546000.js.map"
+      ]
+    }
+  },
+  "in.js": "/packs/js/in-9c420907a00b157c1b9d.js",
+  "in.js.map": "/packs/js/in-9c420907a00b157c1b9d.js.map",
+  "lib/CryptoJS/components/enc-base64.js": "/packs/js/lib/CryptoJS/components/enc-base64-c69087e9eeb0272bc24a.js",
+  "lib/CryptoJS/components/enc-base64.js.map": "/packs/js/lib/CryptoJS/components/enc-base64-c69087e9eeb0272bc24a.js.map",
+  "lib/CryptoJS/components/hmac.js": "/packs/js/lib/CryptoJS/components/hmac-9623fa322719bb24b2c7.js",
+  "lib/CryptoJS/components/hmac.js.map": "/packs/js/lib/CryptoJS/components/hmac-9623fa322719bb24b2c7.js.map",
+  "lib/CryptoJS/rollups/hmac-sha256.js": "/packs/js/lib/CryptoJS/rollups/hmac-sha256-eb56cf5456a00b284c14.js",
+  "lib/CryptoJS/rollups/hmac-sha256.js.map": "/packs/js/lib/CryptoJS/rollups/hmac-sha256-eb56cf5456a00b284c14.js.map",
+  "lib/CryptoJS/rollups/sha256.js": "/packs/js/lib/CryptoJS/rollups/sha256-32e963bc3bc5faa91e05.js",
+  "lib/CryptoJS/rollups/sha256.js.map": "/packs/js/lib/CryptoJS/rollups/sha256-32e963bc3bc5faa91e05.js.map",
+  "lib/apiGatewayCore/apiGatewayClient.js": "/packs/js/lib/apiGatewayCore/apiGatewayClient-025510310bee2d2060b2.js",
+  "lib/apiGatewayCore/apiGatewayClient.js.map": "/packs/js/lib/apiGatewayCore/apiGatewayClient-025510310bee2d2060b2.js.map",
+  "lib/apiGatewayCore/sigV4Client.js": "/packs/js/lib/apiGatewayCore/sigV4Client-1af616ac71e037915a3a.js",
+  "lib/apiGatewayCore/sigV4Client.js.map": "/packs/js/lib/apiGatewayCore/sigV4Client-1af616ac71e037915a3a.js.map",
+  "lib/apiGatewayCore/simpleHttpClient.js": "/packs/js/lib/apiGatewayCore/simpleHttpClient-218bafefc196c62b3ff7.js",
+  "lib/apiGatewayCore/simpleHttpClient.js.map": "/packs/js/lib/apiGatewayCore/simpleHttpClient-218bafefc196c62b3ff7.js.map",
+  "lib/apiGatewayCore/utils.js": "/packs/js/lib/apiGatewayCore/utils-ba8930224fc1ef788217.js",
+  "lib/apiGatewayCore/utils.js.map": "/packs/js/lib/apiGatewayCore/utils-ba8930224fc1ef788217.js.map",
+  "lib/axios/dist/axios.js": "/packs/js/lib/axios/dist/axios-fa837d685c9ef9190e63.js",
+  "lib/axios/dist/axios.js.map": "/packs/js/lib/axios/dist/axios-fa837d685c9ef9190e63.js.map",
+  "lib/url-template/url-template.js": "/packs/js/lib/url-template/url-template-6dec30e6f7819ee3538e.js",
+  "lib/url-template/url-template.js.map": "/packs/js/lib/url-template/url-template-6dec30e6f7819ee3538e.js.map",
+  "search.js": "/packs/js/search-0ba05f8eb484a5546000.js",
+  "search.js.map": "/packs/js/search-0ba05f8eb484a5546000.js.map"
+}

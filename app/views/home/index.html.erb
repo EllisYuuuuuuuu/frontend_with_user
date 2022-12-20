@@ -1,0 +1,6 @@
+<%= pp %>
+<% if user_signed_in? %>
+  <%= render 'home/build' %> 
+<% else %>
+  <%= render 'home/info'%>  
+<% end %>
