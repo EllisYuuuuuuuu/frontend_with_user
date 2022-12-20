@@ -8,9 +8,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
-//= require apigClient
-//= require search
-//= require_tree lib
+//= require_tree .
 
 Rails.start()
 Turbolinks.start()
