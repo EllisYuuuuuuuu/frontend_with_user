@@ -83,21 +83,21 @@ apigClientFactory.newClient = function (config) {
     
     
     
-    apigClient.configsGet = function (params, body, additionalParams) {
+    apigClient.configsPost = function (params, body, additionalParams) {
         if(additionalParams === undefined) { additionalParams = {}; }
         
-        apiGateway.core.utils.assertParametersDefined(params, ['x-pcbuilder-token'], ['body']);
+        apiGateway.core.utils.assertParametersDefined(params, [], ['body']);
         
-        var configsGetRequest = {
-            verb: 'get'.toUpperCase(),
+        var configsPostRequest = {
+            verb: 'post'.toUpperCase(),
             path: pathComponent + uritemplate('/configs').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
-            headers: apiGateway.core.utils.parseParametersToObject(params, ['x-pcbuilder-token']),
+            headers: apiGateway.core.utils.parseParametersToObject(params, []),
             queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
             body: body
         };
         
         
-        return apiGatewayClient.makeRequest(configsGetRequest, authType, additionalParams, config.apiKey);
+        return apiGatewayClient.makeRequest(configsPostRequest, authType, additionalParams, config.apiKey);
     };
     
     
@@ -116,60 +116,6 @@ apigClientFactory.newClient = function (config) {
         
         
         return apiGatewayClient.makeRequest(configsOptionsRequest, authType, additionalParams, config.apiKey);
-    };
-    
-    
-    apigClient.configsConfigIdGet = function (params, body, additionalParams) {
-        if(additionalParams === undefined) { additionalParams = {}; }
-        
-        apiGateway.core.utils.assertParametersDefined(params, ['config_id', 'x-pcbuilder-token'], ['body']);
-        
-        var configsConfigIdGetRequest = {
-            verb: 'get'.toUpperCase(),
-            path: pathComponent + uritemplate('/configs/{config_id}').expand(apiGateway.core.utils.parseParametersToObject(params, ['config_id', ])),
-            headers: apiGateway.core.utils.parseParametersToObject(params, ['x-pcbuilder-token']),
-            queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
-            body: body
-        };
-        
-        
-        return apiGatewayClient.makeRequest(configsConfigIdGetRequest, authType, additionalParams, config.apiKey);
-    };
-    
-    
-    apigClient.configsConfigIdPut = function (params, body, additionalParams) {
-        if(additionalParams === undefined) { additionalParams = {}; }
-        
-        apiGateway.core.utils.assertParametersDefined(params, ['config_id', 'x-pcbuilder-token', 'body'], ['body']);
-        
-        var configsConfigIdPutRequest = {
-            verb: 'put'.toUpperCase(),
-            path: pathComponent + uritemplate('/configs/{config_id}').expand(apiGateway.core.utils.parseParametersToObject(params, ['config_id', ])),
-            headers: apiGateway.core.utils.parseParametersToObject(params, ['x-pcbuilder-token', ]),
-            queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
-            body: body
-        };
-        
-        
-        return apiGatewayClient.makeRequest(configsConfigIdPutRequest, authType, additionalParams, config.apiKey);
-    };
-    
-    
-    apigClient.configsConfigIdOptions = function (params, body, additionalParams) {
-        if(additionalParams === undefined) { additionalParams = {}; }
-        
-        apiGateway.core.utils.assertParametersDefined(params, ['config_id'], ['body']);
-        
-        var configsConfigIdOptionsRequest = {
-            verb: 'options'.toUpperCase(),
-            path: pathComponent + uritemplate('/configs/{config_id}').expand(apiGateway.core.utils.parseParametersToObject(params, ['config_id'])),
-            headers: apiGateway.core.utils.parseParametersToObject(params, []),
-            queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
-            body: body
-        };
-        
-        
-        return apiGatewayClient.makeRequest(configsConfigIdOptionsRequest, authType, additionalParams, config.apiKey);
     };
     
     

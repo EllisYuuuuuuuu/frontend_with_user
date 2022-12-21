@@ -13,3 +13,104 @@
  *= require_tree .
  *= require_self
  */
+ body {
+    background-color: #f2e3cf; 
+  }
+  
+  header {
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+  }
+  
+  nav {
+    border-bottom: 1.5px solid #f2e3cf; 
+    height: 60px;
+  }
+  .title {
+    margin: 100px;
+    margin-bottom: auto;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+  }
+  
+  .column {
+    margin: 50px;
+    margin-bottom: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 40%;
+    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  #searchArea {
+    float: left;
+  }
+  
+  #level, #budget, #email {
+    height: 25px;
+    width: 500px;
+  }
+  
+  #topSets {
+    float: right;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  #top_hardware_info {
+    font-weight: normal;
+    font-size: 15px;
+  }
+  
+  #top_header {
+    font-style: normal;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  #level, #budget, #email {
+    margin-bottom: 10px;
+  }
+  
+  #submit {
+    background-color: burlywood;
+  }
+  
+  .recommendations {
+    margin: 50px;
+    margin-bottom: 60px;
+    padding: 50px;
+    font-size: 15px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  #hardware_info {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  #like {
+    background-color: burlywood;
+  }
+  
+  .copyright {
+    display:block;
+    margin-top: 100px;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
