@@ -1,4 +1,6 @@
-window.submitChat = async function submitChat(e) {
+let allHardwares = null
+
+async function submitChat(e) {
         const host = "https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v2/recommend/?"
         var level = document.getElementById('level').value;
         var budget = document.getElementById('budget').value;
@@ -30,16 +32,16 @@ window.submitChat = async function submitChat(e) {
         }).then(function (response) {
             const result = response.json()
             console.log(result.then((res)=>{
-                const allHardwares = res.body
+                allHardwares = res.body
                 console.log(allHardwares)
                 const hardwareNames = ["CPU", "GPU", "RAM", "SSD", "HDD", "USB"]
-                document.getElementById('hardware_info').innerText = "Here is our recommendations: (More results are send to your email) \n";
+                // document.getElementById('hardware_info').innerText = "Here is our recommendations: (More results are send to your email) \n";
                 for (let j = 0; j < hardwareNames.length; j++){
                     let hardwareName = hardwareNames[j]
                     const hardwareList = allHardwares[hardwareName]
                     const hardwareArea = document.getElementById(hardwareName)
-                    hardwareArea.innerText = hardwareName + ":\n "
-                    hardwareArea.innerText+=hardwareList[0]
+                    // hardwareArea.innerText = hardwareName + ":\n "
+                    hardwareArea.innerText = hardwareList[0]
                 }
             }))
         })
@@ -62,4 +64,21 @@ window.submitChat = async function submitChat(e) {
         //     }).catch( function(result){
         //     console.log(JSON.stringify(result))
         // });
-    }
+}
+
+let likeResult = function() {
+    // if user click like button, call the api to modify the database
+    const likeUrl = "https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v2/configs"
+    fetch(likeUrl, {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(allHardwares)
+    }).then(function (response) {
+        const result = response.json()
+        console.log(result.then((res)=>{
+            console.log(res)
+        }))
+    })
+}
