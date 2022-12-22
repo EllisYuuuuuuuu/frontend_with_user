@@ -66,19 +66,37 @@ async function submitChat(e) {
         // });
 }
 
-let likeResult = function() {
+// let likeResult = function() {
+//     // if user click like button, call the api to modify the database
+//     // disable the like button after click
+//     document.getElementById('like').disabled = true
+//     const likeUrl = "https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v3/configs"
+//     fetch(likeUrl, {
+//         method: 'post',
+//         headers: {
+//             'Content-Type': 'application/json',
+//             //'Access-Control-Allow-Origin': '*',
+//         },
+//         mode: 'no-cors',
+//         body: JSON.stringify(allHardwares)
+//     }).then(function (response) {
+//         const result = response.json()
+//         console.log(result.then((res)=>{
+//             console.log(res)
+//         }))
+//     })
+// }
+
+async function likeResult() {
     // if user click like button, call the api to modify the database
-    const likeUrl = "https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v2/configs"
-    fetch(likeUrl, {
+    const likeUrl = "https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v3/configs"
+    const response = await fetch(likeUrl, {
         method: 'post',
+        mode: 'no-cors',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(allHardwares)
-    }).then(function (response) {
-        const result = response.json()
-        console.log(result.then((res)=>{
-            console.log(res)
-        }))
     })
+    document.getElementById('like').disabled = true
 }

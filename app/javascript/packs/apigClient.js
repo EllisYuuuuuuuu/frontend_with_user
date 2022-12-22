@@ -53,7 +53,7 @@ apigClientFactory.newClient = function (config) {
 
     
     // extract endpoint and path from url
-    var invokeUrl = 'https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v2';
+    var invokeUrl = 'https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v3';
     var endpoint = /(^https?:\/\/[^\/]+)/g.exec(invokeUrl)[1];
     var pathComponent = invokeUrl.substring(endpoint.length);
 
@@ -158,7 +158,7 @@ apigClientFactory.newClient = function (config) {
     apigClient.recommendGet = function (params, body, additionalParams) {
         if(additionalParams === undefined) { additionalParams = {}; }
         
-        apiGateway.core.utils.assertParametersDefined(params, ['budget', 'level', 'email'], ['body']);
+        apiGateway.core.utils.assertParametersDefined(params, ['budget', 'level', 'body', 'email'], ['body']);
         
         var recommendGetRequest = {
             verb: 'get'.toUpperCase(),
@@ -206,6 +206,42 @@ apigClientFactory.newClient = function (config) {
         
         
         return apiGatewayClient.makeRequest(recommendOptionsRequest, authType, additionalParams, config.apiKey);
+    };
+    
+    
+    apigClient.tophitsConfigGet = function (params, body, additionalParams) {
+        if(additionalParams === undefined) { additionalParams = {}; }
+        
+        apiGateway.core.utils.assertParametersDefined(params, [], ['body']);
+        
+        var tophitsConfigGetRequest = {
+            verb: 'get'.toUpperCase(),
+            path: pathComponent + uritemplate('/tophits-config').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
+            headers: apiGateway.core.utils.parseParametersToObject(params, []),
+            queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
+            body: body
+        };
+        
+        
+        return apiGatewayClient.makeRequest(tophitsConfigGetRequest, authType, additionalParams, config.apiKey);
+    };
+    
+    
+    apigClient.tophitsConfigOptions = function (params, body, additionalParams) {
+        if(additionalParams === undefined) { additionalParams = {}; }
+        
+        apiGateway.core.utils.assertParametersDefined(params, [], ['body']);
+        
+        var tophitsConfigOptionsRequest = {
+            verb: 'options'.toUpperCase(),
+            path: pathComponent + uritemplate('/tophits-config').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
+            headers: apiGateway.core.utils.parseParametersToObject(params, []),
+            queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
+            body: body
+        };
+        
+        
+        return apiGatewayClient.makeRequest(tophitsConfigOptionsRequest, authType, additionalParams, config.apiKey);
     };
     
 
