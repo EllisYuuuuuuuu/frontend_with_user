@@ -1,7 +1,7 @@
 let allHardwares = null
 
 async function submitChat(e) {
-        const host = "https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v2/recommend/?"
+        const host = "https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v3/recommend/?"
         var level = document.getElementById('level').value;
         var budget = document.getElementById('budget').value;
         var email = document.getElementById('email').value;
