@@ -2,7 +2,7 @@ $(document).ready(function() {
     console.log('ready');
 
     $.ajax({
-        url: "https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v2/hot-config",
+        url: "https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v3/hot-config",
         type: "GET",
         crossDomain: true,
         // contentType: 'application/json',
