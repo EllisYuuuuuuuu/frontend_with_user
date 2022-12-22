@@ -1,6 +1,6 @@
 let allHardwares = null
 
-async function submitChat(e) {
+window.submitChat = async function submitChat(e) {
         const host = "https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v3/recommend/?"
         var level = document.getElementById('level').value;
         var budget = document.getElementById('budget').value;
@@ -87,8 +87,9 @@ async function submitChat(e) {
 //     })
 // }
 
-async function likeResult() {
+window.likeResult = async function likeResult() {
     // if user click like button, call the api to modify the database
+    document.getElementById('like').disabled = true
     const likeUrl = "https://i9umv18cjj.execute-api.us-east-1.amazonaws.com/v3/configs"
     const response = await fetch(likeUrl, {
         method: 'post',
@@ -98,5 +99,5 @@ async function likeResult() {
         },
         body: JSON.stringify(allHardwares)
     })
-    document.getElementById('like').disabled = true
+    console.log("like result button clicked and send post request!")
 }
