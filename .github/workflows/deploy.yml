@@ -13,11 +13,13 @@ jobs:
       uses: appleboy/ssh-action@v0.1.6
       with:
         host: 3.234.246.243
+        username: centos
         key: ${{ secrets.SSH_USER }}
         script: git clone git@github.com:E6156Cloud/frontend_with_user.git
     - name: BUILD
       uses: appleboy/ssh-action@v0.1.6
       with:
+        username: centos
         host: 3.234.246.243
         key: ${{ secrets.SSH_USER }}
         script: podman build -t 6156 -f Dockerfile.development
@@ -25,5 +27,6 @@ jobs:
       uses: appleboy/ssh-action@v0.1.6
       with:
         host: 3.234.246.243
+        username: centos
         key: ${{ secrets.SSH_USER }}
         script: podman run -d -e PORT=8000 -p 8000:8000 localhost/6156:latest
