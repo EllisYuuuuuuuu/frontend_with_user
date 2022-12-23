@@ -1,7 +1,32 @@
-<h1><%= current_user.email %>'s profile page:</h1>
-<br/>
-<br/>
-<br/>
-<% if  current_user.website.nil? %>
-  <h2>Hey my friend, you should enter your information and let PC build give you the recommanded configuration</h2>
-  <% else %> <h2>Your website address: <%= current_user.website%></h2> <% end %>
+<h2><%= current_user.email %>'s profile page:</h2>
+<h1 id="user_email" style="display: none"><%= current_user.email %></h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<%= javascript_pack_tag "profile" %>
+
+<body>
+<div class="row">
+<div class="recommendations">
+    <h2>Your last search result:</h2>
+    <div id="hardware_info"></div>
+    <b>CPU: </b>
+    <div id="CPU"><br></div>
+    <b>GPU: </b>
+    <div id="GPU"><br></div>
+    <b>RAM: </b>
+    <div id="RAM"><br></div>
+    <b>SSD: </b>
+    <div id="SSD"><br></div>
+    <b>HDD: </b>
+    <div id="HDD"><br></div>
+    <b>USB: </b>
+    <div id="USB"><br></div>
+</div>
+
+</body>
+
+</html>

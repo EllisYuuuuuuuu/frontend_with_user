@@ -209,6 +209,60 @@ apigClientFactory.newClient = function (config) {
     };
     
     
+    apigClient.saveGet = function (params, body, additionalParams) {
+        if(additionalParams === undefined) { additionalParams = {}; }
+        
+        apiGateway.core.utils.assertParametersDefined(params, ['email'], ['body']);
+        
+        var saveGetRequest = {
+            verb: 'get'.toUpperCase(),
+            path: pathComponent + uritemplate('/save').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
+            headers: apiGateway.core.utils.parseParametersToObject(params, []),
+            queryParams: apiGateway.core.utils.parseParametersToObject(params, ['email']),
+            body: body
+        };
+        
+        
+        return apiGatewayClient.makeRequest(saveGetRequest, authType, additionalParams, config.apiKey);
+    };
+    
+    
+    apigClient.savePost = function (params, body, additionalParams) {
+        if(additionalParams === undefined) { additionalParams = {}; }
+        
+        apiGateway.core.utils.assertParametersDefined(params, [], ['body']);
+        
+        var savePostRequest = {
+            verb: 'post'.toUpperCase(),
+            path: pathComponent + uritemplate('/save').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
+            headers: apiGateway.core.utils.parseParametersToObject(params, []),
+            queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
+            body: body
+        };
+        
+        
+        return apiGatewayClient.makeRequest(savePostRequest, authType, additionalParams, config.apiKey);
+    };
+    
+    
+    apigClient.saveOptions = function (params, body, additionalParams) {
+        if(additionalParams === undefined) { additionalParams = {}; }
+        
+        apiGateway.core.utils.assertParametersDefined(params, [], ['body']);
+        
+        var saveOptionsRequest = {
+            verb: 'options'.toUpperCase(),
+            path: pathComponent + uritemplate('/save').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
+            headers: apiGateway.core.utils.parseParametersToObject(params, []),
+            queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
+            body: body
+        };
+        
+        
+        return apiGatewayClient.makeRequest(saveOptionsRequest, authType, additionalParams, config.apiKey);
+    };
+    
+    
     apigClient.tophitsConfigGet = function (params, body, additionalParams) {
         if(additionalParams === undefined) { additionalParams = {}; }
         
