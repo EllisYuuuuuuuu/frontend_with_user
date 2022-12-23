@@ -22,7 +22,7 @@ jobs:
         username: centos
         host: 3.234.246.243
         key: ${{ secrets.SSH_USER }}
-        script: podman build -t 6156 -f Dockerfile.development
+        script: cd frontend_with_user && podman build -t 6156 -f Dockerfile.development
     - name: RUN
       uses: appleboy/ssh-action@v0.1.6
       with:
