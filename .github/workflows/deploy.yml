@@ -15,7 +15,7 @@ jobs:
         host: 3.234.246.243
         username: centos
         key: ${{ secrets.SSH_USER }}
-        script: git clone git@github.com:E6156Cloud/frontend_with_user.git
+        script: cd frontend_with_user && git pull
     - name: BUILD
       uses: appleboy/ssh-action@v0.1.6
       with:
